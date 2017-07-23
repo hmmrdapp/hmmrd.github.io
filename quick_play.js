@@ -24,7 +24,7 @@ $(document).on('click', ".top-card", function() {
   }
 });
 
-$(document).on("swiperight", ".top-card", function() {
+$('.top-card').on("swiperight", function() {
   nextCard();
 });
 
