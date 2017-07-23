@@ -1,0 +1,26 @@
+.container {
+  margin-top: 70px;
+}
+
+.logo-outer {
+    width: 250px;
+    height: calc(100vh - 70px);
+
+    margin: 0 auto;
+}
+
+.logo {
+    width: 100%;
+}
+
+@media screen and (max-width: 499px) {
+    .logo-container {
+        width: 200px;
+    }
+}
+
+@media screen and (max-width: 399px) {
+    .logo-container {
+        width: 150px;
+    }
+}

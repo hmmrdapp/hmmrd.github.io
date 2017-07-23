@@ -1,0 +1,341 @@
+.container {
+	height: calc(100vh - 70px);
+}
+
+.btn {
+	color: #333;
+	background-color: #ddd;
+}
+
+/*			Intro			*/
+	.loading-icon {
+		height: 100px;
+		width: 100px;
+
+		margin: 0 auto;
+		text-align: center;
+	}
+
+	.loading-icon img {
+		height: 100%;
+		width: 100%;
+	}
+/**********************************/
+
+/*			Card Flip Animation			*/
+	.card {
+		position: absolute;
+
+		perspective: 1000px;
+		-webkit-perspective: 1000px;
+		cursor: pointer;
+	}
+
+	.top-card {
+		z-index: 10;
+	}
+
+	.card-inner {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+
+		transition: 0.6s;
+		-webkit-transition: 0.6s;
+		transform-style: preserve-3d;
+		-webkit-transform-style: preserve-3d;
+	}
+
+
+	.card.flip>.card-inner {
+		transform: rotateY(180deg);
+		-webkit-transform: rotateY(180deg);
+	}
+
+	.card-inner > div {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+
+		backface-visibility: hidden;
+		-webkit-backface-visibility: hidden;
+	}
+
+	.card-back {
+		z-index: 2;
+		background-color: #FFFFFF;
+
+		transform: rotateY(0deg);
+		-webkit-transform: rotateY(0deg);
+	}
+
+	.card-front {
+		transform: rotateY(180deg);
+		-webkit-transform: rotateY(180deg);
+	}
+/**********************************/
+
+/*			Card Swipe Animation 			*/
+	.deck .card.card_finished {
+		animation: cardSwipe 0.5s forwards;
+		-webkit-animation: cardSwipe 0.5s forwards;
+
+		-webkit-transform-origin: 50% 300%;
+		transform-origin: 50% 300%;
+	}
+
+	@keyframes cardSwipe {
+		to {
+			opacity: 0;
+			-webkit-transform: rotate3d(0,0,1,20deg);
+			transform: rotate3d(0,0,1,20deg);
+		}
+	}
+
+	@-webkit-keyframes cardSwipe {
+		to {
+			opacity: 0;
+			-webkit-transform: rotate3d(0,0,1,20deg);
+			transform: rotate3d(0,0,1,20deg);
+		}
+	}
+/**********************************/
+
+
+/*			Card Style				*/
+	.deck {
+		margin: 0 auto;
+	}
+
+	.deck, .card {
+		width: 320px;
+		height: 480px;
+	}
+
+	.card-inner > div {
+		box-shadow: -5px 5px 10px #222;
+		border-radius: 10px;
+		border:	3px solid #333333;
+		padding: 10px;
+
+		text-align: center;
+	}
+
+	/*			Card Back 				*/
+		.card-back {
+			background-color: #ffffff;
+		}
+
+		.card-img-container {
+			height: 320px;
+		}
+
+		.card-img {
+			width: 240px;
+			border-radius: 10px;
+		}
+
+		.card-back-footer {
+			height: 134px;
+			color: #333333;
+		}
+
+		.card-back-footer .footer-icon-container {
+			padding: 10px;
+		}
+
+		.card-back-footer .footer-icon-container .inner {
+			height: 60px;
+			vertical-align: bottom;
+		}
+
+	/**************************/
+
+	/*			Card Front 				*/
+		.card-front {
+			background-color: #000000;
+		}
+
+		.card-front-inner {
+			width: 100%;
+			height: 100%;
+
+			border: 10px solid white;
+			border-radius: 10px;
+			padding: 10px;
+		}
+
+		.card-header {
+			height: 90px;
+			padding-top: 20px;
+		}
+
+			.card-title {
+				margin-bottom: 0;
+				font-size: 32px;
+			}
+
+			.card-subtitle {
+				font-size: 18px;
+			}
+
+		.card-body {
+			height: 254px;
+			font-size: 22px;
+		}
+
+		.card-footer {
+			height: 70px;
+		}
+	/**************************/
+
+	/*			Footer-Icons 			*/
+
+		.footer-icon-container {
+			width: 50%;
+			height: 100%;
+			float: left;
+
+			padding-bottom: 5px;
+			font-size: 32px;
+		}
+
+		.footer-icon-container .inner {
+			height: 50px;
+			vertical-align: bottom;
+		}
+
+		.footer-icon {
+			height: 100%;
+		}
+
+		.footer-text {
+			display: inline;
+
+			position: relative;
+			top: 12px;
+			left: -6px;
+		}
+
+		.footer-text span {
+			line-height: 50px;
+		}
+
+		.times-symbol {
+			font-size: 55px;
+		}
+
+		.times-number {
+			font-weight: bold;
+		}
+
+		.footer-icon-left .inner {
+			text-align: left;
+		}
+
+		.footer-icon-right .inner {
+			text-align: right;
+		}
+
+	/**************************/
+
+	@media screen and (max-height: 700px) {
+		.deck, .card {
+			width: 240px;
+			height: 360px;
+		}
+
+		/*  Card Front    */
+			.card-front { 
+				padding: 8px;
+			}
+
+			.card-front-inner {
+				padding: 5px;
+				border: 8px solid white;
+			}
+
+			.card-header {
+				height: 68px;
+				padding-top: 15px;
+			}
+
+				.card-title {
+					font-size: 24px;
+				}
+
+				.card-subtitle {
+					font-size: 14px;
+				}
+
+			.card-body {
+				font-size: 17px;
+				height: 188px;
+			}
+
+			.card-footer {
+				height: 52px;
+			}
+
+		/******************/
+
+		/*  Card Back     */
+			.card-img-container{
+				height: 240px;
+			}
+
+			.card-img {
+				width: 180px;
+			}
+
+			.card-back-footer {
+				height: 94px;
+			}
+
+			.card-back-footer .footer-icon-container {
+				padding: 5px;
+				padding-bottom: 15px;
+			}
+
+			.card-back-footer .footer-icon-container .inner {
+				height: 45px;
+			}
+		/******************/
+
+		/*  Footer Icons  */
+			.footer-icon-container {
+				font-size: 24px;
+			}
+
+			.footer-icon-container .inner {
+				height: 38px;
+			}
+
+			.footer-text {
+				top: 10px;
+			}
+
+			.footer-text span {
+				line-height: 38px;
+			}
+
+			.times-symbol {
+				font-size: 40px;
+			}
+		/******************/
+	}
+
+/**********************************/
+
+/*		  	Controls 			*/
+	.controls-container {
+		width: 100%;
+		text-align: center;
+
+		margin-top: 20px;
+	}
+
+	.controls-container .btn {
+		width: 100px;
+	}
+/**********************************/
