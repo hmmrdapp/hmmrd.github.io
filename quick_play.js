@@ -14,11 +14,35 @@ $(document).ready(function() {
 
 $(document).on('click', ".top-card", function() {
 	$(this).toggleClass("flip");
+
+
+  if ($(".top-card").hasClass('flip')) {
+    $('#action-btn').text("next card");
+  }
+  else {
+    $('#action-btn').text("flip");
+  }
 });
 
-$('#flip-btn').click( function() {
-	$('.top-card').toggleClass('flip');
+$(document).on("swiperight", ".top-card", function() {
+  nextCard();
 });
+
+$('#action-btn').click( function() {
+  if ($(".top-card").hasClass('flip') && !$(".top-card").hasClass('card_finished')) {
+    nextCard();
+    $(this).text("flip");
+  }
+  else {
+    $('.top-card').addClass('flip'); 
+    $(this).text("next card");
+  }
+});
+
+// $('#next-card-btn').on('click', function(){
+//   nextCard();
+// });;
+
 
 function whichAnimationEvent(){
   var t,
@@ -40,10 +64,6 @@ function whichAnimationEvent(){
 var animationEvent = whichAnimationEvent();
 
 
-
-$('#next-card-btn').on('click', function(){
-	nextCard();
-});;
 
 function nextCard() {
 	//throw away card 1
@@ -216,12 +236,3 @@ function endLoading() {
 
 	startGame();
 }
-// $(".top-card").touchwipe({
-//      wipeLeft: function() { alert("left"); },
-//      wipeRight: function() { alert("right"); },
-//      wipeUp: function() { alert("up"); },
-//      wipeDown: function() { alert("down"); },
-//      min_move_x: 20,
-//      min_move_y: 20,
-//      preventDefaultEvents: true
-// });

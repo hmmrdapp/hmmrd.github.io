@@ -65,6 +65,11 @@
     border: 2px solid white;
   }
 
+  .btn {
+    border: 2px solid #333;
+    color: #333;
+  }
+
   .rules-btn-row {
     text-align: center;
   }
