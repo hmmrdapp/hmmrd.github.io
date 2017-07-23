@@ -142,6 +142,7 @@
 
 		.card-back-footer .footer-icon-container {
 			padding: 10px;
+			padding-bottom: 15px;
 		}
 
 		.card-back-footer .footer-icon-container .inner {
@@ -207,6 +208,10 @@
 
 		.footer-icon {
 			height: 100%;
+		}
+
+		.footer-icon-right .footer-text {
+			left: 6px;
 		}
 
 		.footer-text {
@@ -294,7 +299,7 @@
 
 			.card-back-footer .footer-icon-container {
 				padding: 5px;
-				padding-bottom: 15px;
+				padding-bottom: 10px;
 			}
 
 			.card-back-footer .footer-icon-container .inner {

@@ -98,13 +98,13 @@ function makeCard(n, pos) {
               </div> \
               <div class="footer-icon-container footer-icon-right outer"> \
                 <div class="inner"> \
-                  <img class="footer-icon" src="img/red_avatar.png"> \
                   <div class="footer-text"> \
-                    <span class="times-symbol">&times;</span>  \
                     <span class="times-number"> \
                       '+card['Opponents']+' \
                     </span> \
+                    <span class="times-symbol">&times;</span>  \
                   </div> \
+                  <img class="footer-icon" src="img/red_avatar.png"> \
                 </div> \
               </div> \
             </div> \
@@ -138,13 +138,13 @@ function makeCard(n, pos) {
                 </div> \
                 <div class="footer-icon-container footer-icon-right outer"> \
                   <div class="inner"> \
-                    <img class="footer-icon" src="img/red_cup.png"> \
                     <div class="footer-text"> \
-                      <span class="times-symbol">&times;</span>  \
                       <span class="times-number"> \
                         '+card['Failure']+' \
                       </span> \
+                      <span class="times-symbol">&times;</span>  \
                     </div> \
+                    <img class="footer-icon" src="img/red_cup.png"> \
                   </div> \
                 </div> \
               </div> \
