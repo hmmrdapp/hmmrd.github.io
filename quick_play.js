@@ -30,7 +30,6 @@ $(document).ready(function() {
   $('#action-btn').click( function() {
     if ($(".top-card").hasClass('flip') && !$(".top-card").hasClass('card_finished')) {
       nextCard();
-      $(this).text("flip");
     }
     else {
       $('.top-card').addClass('flip'); 
@@ -202,13 +201,17 @@ $(document).ready(function() {
   }
 
   function nextCard(ev) {
+    //rename action button
+    $('#action-btn').text("flip");
+
     //throw away card 1
-    $('.top-card').addClass('card_finished'); //triggers animation
+    $('.top-card').addClass('card_finished'); 
+
     if(ev == 'swipeleft') {
-      $('.top-card').addClass('card_finished_left'); //triggers animation
+      $('.top-card').addClass('card_finished_left'); 
     }
     else {
-      $('.top-card').addClass('card_finished_right'); //triggers animation
+      $('.top-card').addClass('card_finished_right'); 
     }
 
     drawCard(deckSize+1);
