@@ -3,50 +3,86 @@ var deckSize = 5;
 var cardOffset = 5;
 var deckOfCards;
 var suits;
+var triviaDeck;
 
-$(document).ready(function() {	
-	retrieveFB('Cards', shuffleCards);
-	retrieveFB('Suits', function(data) {
-		suits = data;
-		endLoading();
-	});
+// trivia is only on next card so doesnt work if first card is a trivia
+
+// 0: not trivia
+// 1: flip but turn on trivia
+// 2: show q
+// 3: show answer
+var triviaState = 0;
+
+$(document).ready(function() {  
+  retrieveFB('Cards', shuffleCards);
+  retrieveFB('Trivia', function(data) {
+    triviaDeck = data;
+  });
+  retrieveFB('Suits', function(data) {
+    suits = data;
+    endLoading();
+  });
+  // endLoading();
 });
 
 // Interactions  //
-
   $(document).on('click', ".top-card", function() {
-  	$(this).toggleClass("flip");
-
+    $(this).toggleClass("flip");
     if ($(".top-card").hasClass('flip')) {
-      setupHammer();
+      // setupHammer();
       $('#action-btn').text("next card");
     }
     else {
-      removeHammer();
+      // removeHammer();
       $('#action-btn').text("flip");
     }
   });
 
   $('#action-btn').click( function() {
-    if ($(".top-card").hasClass('flip') && !$(".top-card").hasClass('card_finished')) {
-      nextCard();
+    if(triviaState == 0) {
+      $('.trivia-card').addClass('hidden');
+      if ($(".top-card").hasClass('flip') && !$(".top-card").hasClass('card_finished')) {
+        nextCard();
+      }
+      else {
+        $('.top-card').addClass('flip'); 
+        // setupHammer();
+        $(this).text("next card");
+      }
     }
-    else {
+    else if (triviaState == 1) {
       $('.top-card').addClass('flip'); 
-      setupHammer();
-      $(this).text("next card");
+      // setupHammer();
+      // $(this).text("next card");
+      $(this).text("Draw Trivia Card");
+      triviaState = 2;
+    }
+    else if(triviaState == 2) {
+
+      var cardTitle = $('.top-card:not(card_finished)').find('.card-title').text();
+
+      var type = cardTitle.substr(cardTitle.indexOf(':')+1).trim();
+      type = type.charAt(0).toUpperCase() + type.slice(1);
+      var questions = triviaDeck[type];
+      var which     = Math.floor(Math.random() * questions.length)
+
+      $(".trivia-question").append(questions[which]['Question']);
+      $('.trivia-answer').append(questions[which]['Answer']);
+
+      $('.trivia-card').removeClass('hidden');
+      $(this).text("Show Answer");
+
+
+      triviaState = 3;
+    }
+    else if(triviaState == 3) {
+      //show answer
+
+      $('.trivia-answer').removeClass('hidden');
+      $(this).text('Next Card');
+      triviaState = 0;
     }
   });
-
-  function setupHammer() {
-    $(".top-card").hammer().on("swiperight swipeleft", function(ev) {
-      nextCard(ev.type);
-    });
-  }
-
-  function removeHammer() {
-    $(".top-card").hammer().off("swiperight swipeleft");
-  }
 ///////////////////
 
 
@@ -96,46 +132,30 @@ $(document).ready(function() {
 
   function makeCard(n, pos) {
     var card = deckOfCards[n];
-
     if (pos === undefined) pos=n;
 
     var posStyle = "right: "+(cardOffset*(-1/2-pos+deckSize/2))+"px;";
     posStyle = posStyle + " top: "+(-1*cardOffset*(pos-1))+"px;";
     var frontCol = "background-color: #"+suits[card['Type']]['color']+";";
+    var footerStr = ""
+    for (let i = 0; i <card['Teammates']; i++) {
+      let pos = i*20;
+      footerStr += '<img class="footer-icon" src="img/green_avatar.png" style="left: '+pos+'px;">'
+    }
+    for (let i = 0; i <card['Opponents']; i++) {
+      let pos = i*20;
+      footerStr += '<img class="footer-icon" src="img/red_avatar.png" style="right: '+pos+'px;">'
+    }
 
     var cardHTML =  '<div class="card"> \
           <div class="card-inner" style="'+posStyle+'"> \
-            <div class="card-back"> \
-              <div class="card-img-container outer"> \
-                <div class="inner"> \
-                  <img class="card-img" src="img/hmmrd.png"> \
+              <div class="card-back"> \
+                <div class="card-back-img-cont"> \
+                  <img class="card-back-img" src="img/back_blank.png"> \
                 </div> \
+                <div class="card-back-footer">' + footerStr + 
+                '</div> \
               </div> \
-              <div class="card-back-footer"> \
-                <div class="footer-icon-container footer-icon-left outer"> \
-                  <div class="inner"> \
-                    <img class="footer-icon" src="img/green_avatar.png"> \
-                    <div class="footer-text"> \
-                      <span class="times-symbol">&times;</span>  \
-                      <span class="times-number"> \
-                        '+card['Teammates']+' \
-                      </span> \
-                    </div> \
-                  </div> \
-                </div> \
-                <div class="footer-icon-container footer-icon-right outer"> \
-                  <div class="inner"> \
-                    <div class="footer-text"> \
-                      <span class="times-number"> \
-                        '+card['Opponents']+' \
-                      </span> \
-                      <span class="times-symbol">&times;</span>  \
-                    </div> \
-                    <img class="footer-icon" src="img/red_avatar.png"> \
-                  </div> \
-                </div> \
-              </div> \
-            </div> \
             <div class="card-front" style="'+frontCol+'"> \
               <div class="card-front-inner"> \
                 <div class="card-header"> \
@@ -191,13 +211,28 @@ $(document).ready(function() {
    */
   function shuffleCards(data) {
     if (data[0] === undefined) data.shift(); //when pulling from firebase 1st value is undefined
+
+    //delete later
+    trivias = []
+
     for (var i = data.length - 1; i > 0; i--) {
-          var j = Math.floor(Math.random() * (i + 1));
-          var temp = data[i];
-          data[i] = data[j];
-          data[j] = temp;
+      var j = Math.floor(Math.random() * (i + 1));
+      var temp = data[i];
+      data[i] = data[j];
+      data[j] = temp;
+
+      var cardTitle = data[i]['Name'];
+      if(cardTitle.trim().toLowerCase().includes('trivia')) {
+        trivias.push(i)
       }
-      deckOfCards = data;
+
+    }
+
+    var temp = data[2];
+    data[2] = data[trivias[0]];
+    data[trivias[0]] = data[2];
+
+    deckOfCards = data;
   }
 
   function nextCard(ev) {
@@ -217,7 +252,12 @@ $(document).ready(function() {
     drawCard(deckSize+1);
     //re-make the deck
     var $cards = $('.card:not(.card_finished)');
-    $cards.last().addClass('top-card');
+    var topcard = $cards.last();
+    topcard.addClass('top-card');
+    var cardTitle = topcard.find(".card-title").text();
+    if(cardTitle.trim().toLowerCase().includes('trivia')) {
+      triviaState = 1;
+    }
 
     //move the deck to correct position
     for (var i = 0; i < $cards.length; i++) {

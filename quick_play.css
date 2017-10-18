@@ -132,51 +132,80 @@
 
 
 /*			Card Style				*/
+	.game {
+		position: relative;
+	}
+
+	.trivia-card {
+		position: absolute;
+		background-color: white;
+		top: 0;
+		left: -40px;
+		z-index: 20;
+
+		color: black;
+	}
+
+	.trivia-answer {
+		margin-top: 10px;
+	}
+
 	.deck {
 		margin: 0 auto;
 	}
 
-	.deck, .card {
+	.deck, .card, .trivia-card {
 		width: 320px;
-		height: 480px;
+		height: 474px;
 	}
 
 	.card-inner > div {
-		box-shadow: -5px 5px 10px #222;
-		border-radius: 10px;
-		border:	3px solid #333333;
-		padding: 10px;
+		/*box-shadow: -5px 5px 10px #79c8ed;*/
+		border-radius: 20px;
+		border: 2px solid #777;
+		/*padding: 10px;*/
 
 		text-align: center;
 	}
 
+	/*.card {
+		display: none;
+	}
+
+	.top-card {
+		display: block;
+	}*/
+
 	/*			Card Back 				*/
 		.card-back {
-			background-color: #ffffff;
-		}
+			background-color: #5ebceb;
 
-		.card-img-container {
-			height: 320px;
 		}
-
-		.card-img {
-			width: 240px;
-			border-radius: 10px;
-		}
+			.card-back-img-cont {
+				position: absolute;
+				height: 100%;
+				width: 100%;
+				border-radius: 18px;
+				border: 10px solid white;
+			}
+			.card-back-img {
+				height: 100%;
+				width: 100%;
+			}
 
 		.card-back-footer {
-			height: 134px;
-			color: #333333;
+			position: absolute;
+			bottom: 0;
+
+			height: 50px;
+			width: calc(100% - 58px);
+			margin-left: 29px;
+			margin-right: 29px;
+			margin-bottom: 20px;
 		}
 
-		.card-back-footer .footer-icon-container {
-			padding: 10px;
-			padding-bottom: 15px;
-		}
-
-		.card-back-footer .footer-icon-container .inner {
-			height: 60px;
-			vertical-align: bottom;
+		.card-back-footer .footer-icon {
+			position: absolute;
 		}
 
 	/**************************/
@@ -219,6 +248,7 @@
 		}
 	/**************************/
 
+	/*tag for deletion*/
 	/*			Footer-Icons 			*/
 
 		.footer-icon-container {
@@ -370,6 +400,6 @@
 	}
 
 	.controls-container .btn {
-		width: 100px;
+		min-width: 110px;
 	}
 /**********************************/

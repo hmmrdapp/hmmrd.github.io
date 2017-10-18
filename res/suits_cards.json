@@ -1,0 +1,574 @@
+{
+  "Cards" : [ {
+    "Definition" : "answer the sports trivia question with your teammates in one minute or less",
+    "Failure" : 1,
+    "Instruction" : "select three other players to be your teammates",
+    "Name" : "trivia: sports",
+    "Opponents" : 0,
+    "Success" : 1,
+    "Teammates" : 3,
+    "Type" : "head"
+  }, {
+    "Definition" : "answer the geography trivia question with your teammates in one minute or less",
+    "Failure" : 1,
+    "Instruction" : "select three other players to be your teammates",
+    "Name" : "trivia: geography",
+    "Opponents" : 0,
+    "Success" : 1,
+    "Teammates" : 3,
+    "Type" : "head"
+  }, {
+    "Definition" : "answer the science trivia question with your teammates in one minute or less",
+    "Failure" : 1,
+    "Instruction" : "select three other players to be your teammates",
+    "Name" : "trivia: science",
+    "Opponents" : 0,
+    "Success" : 1,
+    "Teammates" : 3,
+    "Type" : "head"
+  }, {
+    "Definition" : "answer the history trivia question with your teammates in one minute or less",
+    "Failure" : 1,
+    "Instruction" : "select three other players to be your teammates",
+    "Name" : "trivia: history",
+    "Opponents" : 0,
+    "Success" : 1,
+    "Teammates" : 3,
+    "Type" : "head"
+  }, {
+    "Definition" : "answer the art trivia question with your teammates in one minute or less",
+    "Failure" : 1,
+    "Instruction" : "select three other players to be your teammates",
+    "Name" : "trivia: art",
+    "Opponents" : 0,
+    "Success" : 1,
+    "Teammates" : 3,
+    "Type" : "head"
+  }, {
+    "Definition" : "answer the pop culture trivia question with your teammates in one minute or less",
+    "Failure" : 1,
+    "Instruction" : "select three other players to be your teammates",
+    "Name" : "trivia: pop culture",
+    "Opponents" : 0,
+    "Success" : 1,
+    "Teammates" : 3,
+    "Type" : "head"
+  }, {
+    "Definition" : "guess the price of an item on amazon chosen by your teammate more closely than your opponent",
+    "Failure" : 1,
+    "Instruction" : "select one other player to be your teammate and one other player to be your opponent",
+    "Name" : "the prime is right",
+    "Opponents" : 1,
+    "Success" : 1,
+    "Teammates" : 1,
+    "Type" : "head"
+  }, {
+    "Definition" : "talk about a topic of your opponent's choosing for 30 seconds without saying any filler words",
+    "Failure" : 1,
+    "Instruction" : "select one other player to be your opponent",
+    "Name" : "pontificate",
+    "Opponents" : 1,
+    "Success" : 1,
+    "Teammates" : 0,
+    "Type" : "head"
+  }, {
+    "Definition" : "pick a word that your opponent cannot spell, but that your teammate can",
+    "Failure" : 1,
+    "Instruction" : "select one other player to be your teammate and one other player to be your opponent",
+    "Name" : "spelling buzzed",
+    "Opponents" : 1,
+    "Success" : 1,
+    "Teammates" : 1,
+    "Type" : "head"
+  }, {
+    "Definition" : "your teammate must correctly guess if you have taken any drug, besides weed, illegally",
+    "Failure" : 1,
+    "Instruction" : "select one other player to be your teammate",
+    "Name" : "high on life",
+    "Opponents" : 0,
+    "Success" : 1,
+    "Teammates" : 1,
+    "Type" : "head"
+  }, {
+    "Definition" : "your team captain must correctly guess the number of people you have been in a relationship with",
+    "Failure" : 1,
+    "Instruction" : "select one other player to be your teammate",
+    "Name" : "how many",
+    "Opponents" : 0,
+    "Success" : 1,
+    "Teammates" : 1,
+    "Type" : "head"
+  }, {
+    "Definition" : "your team captain must correctly guess when you first had sex, choosing from ''before high school,'' ''high school,'' ''college,'' or ''later''",
+    "Failure" : 1,
+    "Instruction" : "select one other player to be your teammate",
+    "Name" : "their first time",
+    "Opponents" : 0,
+    "Success" : 1,
+    "Teammates" : 1,
+    "Type" : "head"
+  }, {
+    "Definition" : "your team captain must correctly guess when you last had sex, choosing from ''last week,'' ''last month,'' ''last year,'' or ''never''",
+    "Failure" : 1,
+    "Instruction" : "select one other player to be your teammate",
+    "Name" : "their last time",
+    "Opponents" : 0,
+    "Success" : 1,
+    "Teammates" : 1,
+    "Type" : "head"
+  }, {
+    "Definition" : "describe, hum or otherwise convey a song that is guessed by your team first",
+    "Failure" : 1,
+    "Instruction" : "select two other players to be your teammates and two other players to be your opponents",
+    "Name" : "name the song",
+    "Opponents" : 2,
+    "Success" : 1,
+    "Teammates" : 2,
+    "Type" : "head"
+  }, {
+    "Definition" : "describe, quote or otherwise convey a movie that is guessed by your team first",
+    "Failure" : 1,
+    "Instruction" : "select two other players to be your teammates and two other players to be your opponents",
+    "Name" : "name the movie",
+    "Opponents" : 2,
+    "Success" : 1,
+    "Teammates" : 2,
+    "Type" : "head"
+  }, {
+    "Definition" : "describe, act out or otherwise convey a TV show that is guessed by your team first",
+    "Failure" : 1,
+    "Instruction" : "select two other players to be your teammates and two other players to be your opponents",
+    "Name" : "name the show",
+    "Opponents" : 2,
+    "Success" : 1,
+    "Teammates" : 2,
+    "Type" : "head"
+  }, {
+    "Definition" : "shotgun a beer",
+    "Failure" : 2,
+    "Instruction" : "you are on your own for this one",
+    "Name" : "shotgun",
+    "Opponents" : 0,
+    "Success" : 2,
+    "Teammates" : 0,
+    "Type" : "muscle"
+  }, {
+    "Definition" : "draw an agreed-upon item on your teammate's back while your opponents do the same and be the first pair to correctly guess the item",
+    "Failure" : 1,
+    "Instruction" : "select one other player to be your teammate and two other players to be your opponents",
+    "Name" : "backtionary",
+    "Opponents" : 2,
+    "Success" : 1,
+    "Teammates" : 1,
+    "Type" : "muscle"
+  }, {
+    "Definition" : "consume a food item of your opponent's choosing",
+    "Failure" : 2,
+    "Instruction" : "select one other player to be your opponent",
+    "Name" : "get it down",
+    "Opponents" : 1,
+    "Success" : 2,
+    "Teammates" : 0,
+    "Type" : "muscle"
+  }, {
+    "Definition" : "take a body shot off your teammate or have your teammate take a body shot off of you",
+    "Failure" : 2,
+    "Instruction" : "select one other player to be your opponent",
+    "Name" : "body shot",
+    "Opponents" : 1,
+    "Success" : 2,
+    "Teammates" : 0,
+    "Type" : "muscle"
+  }, {
+    "Definition" : "sit on the lap of your opponent or have your opponent sit on your lap for one round",
+    "Failure" : 1,
+    "Instruction" : "select one other player to be your opponent",
+    "Name" : "lap dog",
+    "Opponents" : 1,
+    "Success" : 1,
+    "Teammates" : 0,
+    "Type" : "muscle"
+  }, {
+    "Definition" : "take at least one shot and for every shot you take, give two shots",
+    "Failure" : 2,
+    "Instruction" : "you are on your own for this one",
+    "Name" : "ginerosity",
+    "Opponents" : 0,
+    "Success" : 2,
+    "Teammates" : 0,
+    "Type" : "muscle"
+  }, {
+    "Definition" : "beat your opponent in an arm wrestle",
+    "Failure" : 1,
+    "Instruction" : "select one other player to be your opponent",
+    "Name" : "arm wrestle",
+    "Opponents" : 1,
+    "Success" : 1,
+    "Teammates" : 0,
+    "Type" : "muscle"
+  }, {
+    "Definition" : "act out an object that will be guessed by your teammates before it can be guessed by your opponents",
+    "Failure" : 1,
+    "Instruction" : "select two other players to be your teammates and two other players to be your opponents",
+    "Name" : "charades",
+    "Opponents" : 2,
+    "Success" : 1,
+    "Teammates" : 2,
+    "Type" : "muscle"
+  }, {
+    "Definition" : "bounce a ping pong ball into a cup on your first try",
+    "Failure" : 1,
+    "Instruction" : "you are on your own for this one",
+    "Name" : "one bounce",
+    "Opponents" : 0,
+    "Success" : 1,
+    "Teammates" : 0,
+    "Type" : "muscle"
+  }, {
+    "Definition" : "flip a cup on your first try",
+    "Failure" : 1,
+    "Instruction" : "you are on your own for this one",
+    "Name" : "one flip",
+    "Opponents" : 0,
+    "Success" : 1,
+    "Teammates" : 0,
+    "Type" : "muscle"
+  }, {
+    "Definition" : "strip one article of clothing",
+    "Failure" : 1,
+    "Instruction" : "you are on your own for this one",
+    "Name" : "strip one",
+    "Opponents" : 0,
+    "Success" : 1,
+    "Teammates" : 0,
+    "Type" : "moxie"
+  }, {
+    "Definition" : "strip two articles of clothing",
+    "Failure" : 1,
+    "Instruction" : "you are on your own for this one",
+    "Name" : "strip two",
+    "Opponents" : 0,
+    "Success" : 1,
+    "Teammates" : 0,
+    "Type" : "moxie"
+  }, {
+    "Definition" : "strip three articles of clothing",
+    "Failure" : 1,
+    "Instruction" : "you are on your own for this one",
+    "Name" : "strip three",
+    "Opponents" : 0,
+    "Success" : 1,
+    "Teammates" : 0,
+    "Type" : "moxie"
+  }, {
+    "Definition" : "take one article of clothing from each of your teammates and wear it",
+    "Failure" : 1,
+    "Instruction" : "select three other players to be your teammates",
+    "Name" : "thrift shop",
+    "Opponents" : 0,
+    "Success" : 1,
+    "Teammates" : 3,
+    "Type" : "moxie"
+  }, {
+    "Definition" : "allow your opponent to write any message to any person and you cannot respond for the rest of the game",
+    "Failure" : 1,
+    "Instruction" : "select one other player to be your opponent",
+    "Name" : "messages",
+    "Opponents" : 1,
+    "Success" : 1,
+    "Teammates" : 0,
+    "Type" : "moxie"
+  }, {
+    "Definition" : "allow your opponent to write \"I love you\" to any two people and you cannot respond for the rest of the game",
+    "Failure" : 1,
+    "Instruction" : "select one other player to be your opponent",
+    "Name" : "i love you",
+    "Opponents" : 1,
+    "Success" : 1,
+    "Teammates" : 0,
+    "Type" : "moxie"
+  }, {
+    "Definition" : "take turns taking off one article of clothing, starting with your teammate, and be the last one to take an article of clothing off",
+    "Failure" : 1,
+    "Instruction" : "select one other player to be your teammate",
+    "Name" : "strip off",
+    "Opponents" : 0,
+    "Success" : 1,
+    "Teammates" : 1,
+    "Type" : "moxie"
+  }, {
+    "Definition" : "get your lips licked by your opponent",
+    "Failure" : 1,
+    "Instruction" : "select one other player to be your opponent",
+    "Name" : "lick your lips",
+    "Opponents" : 1,
+    "Success" : 1,
+    "Teammates" : 0,
+    "Type" : "moxie"
+  }, {
+    "Definition" : "pass a candy using only your mouth through each player",
+    "Failure" : 1,
+    "Instruction" : "you are on your own for this one",
+    "Name" : "mono",
+    "Opponents" : 0,
+    "Success" : 1,
+    "Teammates" : 0,
+    "Type" : "moxie"
+  }, {
+    "Definition" : "hold a straight face for 30 seconds while everyone else tries to make you break without using their hands",
+    "Failure" : 1,
+    "Instruction" : "you are on your own for this one",
+    "Name" : "unbreakable",
+    "Opponents" : 0,
+    "Success" : 1,
+    "Teammates" : 0,
+    "Type" : "moxie"
+  }, {
+    "Definition" : "reenact three different sex positions with each of your three teammates",
+    "Failure" : 1,
+    "Instruction" : "select three other players to be your teammates",
+    "Name" : "karma sutra",
+    "Opponents" : 0,
+    "Success" : 1,
+    "Teammates" : 3,
+    "Type" : "moxie"
+  }, {
+    "Definition" : "add a regular cup to the middle",
+    "Failure" : 0,
+    "Instruction" : "you are on your own for this one",
+    "Name" : "solo cup",
+    "Opponents" : 0,
+    "Success" : 0,
+    "Teammates" : 0,
+    "Type" : "random"
+  }, {
+    "Definition" : "add two regular cups to the middle",
+    "Failure" : 0,
+    "Instruction" : "you are on your own for this one",
+    "Name" : "a pair goes there",
+    "Opponents" : 0,
+    "Success" : 0,
+    "Teammates" : 0,
+    "Type" : "random"
+  }, {
+    "Definition" : "add three regular cups to the middle",
+    "Failure" : 0,
+    "Instruction" : "you are on your own for this one",
+    "Name" : "more the merrier",
+    "Opponents" : 0,
+    "Success" : 0,
+    "Teammates" : 0,
+    "Type" : "random"
+  }, {
+    "Definition" : "add four regular cups to the middle",
+    "Failure" : 0,
+    "Instruction" : "you are on your own for this one",
+    "Name" : "four more",
+    "Opponents" : 0,
+    "Success" : 0,
+    "Teammates" : 0,
+    "Type" : "random"
+  }, {
+    "Definition" : "add five regular cups to the middle",
+    "Failure" : 0,
+    "Instruction" : "you are on your own for this one",
+    "Name" : "make it rain",
+    "Opponents" : 0,
+    "Success" : 0,
+    "Teammates" : 0,
+    "Type" : "random"
+  }, {
+    "Definition" : "add anywhere from one to five regular cups to the middle",
+    "Failure" : 0,
+    "Instruction" : "you are on your own for this one",
+    "Name" : "up to five up to you",
+    "Opponents" : 0,
+    "Success" : 0,
+    "Teammates" : 0,
+    "Type" : "random"
+  }, {
+    "Definition" : "add another bitch cup to the middle",
+    "Failure" : 0,
+    "Instruction" : "you are on your own for this one",
+    "Name" : "another loser",
+    "Opponents" : 0,
+    "Success" : 0,
+    "Teammates" : 0,
+    "Type" : "random"
+  }, {
+    "Definition" : "take a cup, drink it and add a bitch cup to the middle",
+    "Failure" : 0,
+    "Instruction" : "you are on your own for this one",
+    "Name" : "up the ante",
+    "Opponents" : 0,
+    "Success" : 0,
+    "Teammates" : 0,
+    "Type" : "random"
+  }, {
+    "Definition" : "select up to four other people to drink a cup with you with your choosing last",
+    "Failure" : 0,
+    "Instruction" : "you are on your own for this one",
+    "Name" : "drain the swamp",
+    "Opponents" : 0,
+    "Success" : 0,
+    "Teammates" : 0,
+    "Type" : "random"
+  }, {
+    "Definition" : "select someone to drink a cup and skip to their turn",
+    "Failure" : 0,
+    "Instruction" : "you are on your own for this one",
+    "Name" : "choose wisely",
+    "Opponents" : 0,
+    "Success" : 0,
+    "Teammates" : 0,
+    "Type" : "random"
+  }, {
+    "Definition" : "skip to the turn of a person of your choosing",
+    "Failure" : 0,
+    "Instruction" : "you are on your own for this one",
+    "Name" : "mix it up",
+    "Opponents" : 0,
+    "Success" : 0,
+    "Teammates" : 0,
+    "Type" : "random"
+  }, {
+    "Definition" : "rearrange the turn order of as many players as you'd like",
+    "Failure" : 0,
+    "Instruction" : "you are on your own for this one",
+    "Name" : "scramble",
+    "Opponents" : 0,
+    "Success" : 0,
+    "Teammates" : 0,
+    "Type" : "random"
+  }, {
+    "Definition" : "take a drink",
+    "Failure" : 0,
+    "Instruction" : "you are on your own for this one",
+    "Name" : "drink one",
+    "Opponents" : 0,
+    "Success" : 0,
+    "Teammates" : 0,
+    "Type" : "drink"
+  }, {
+    "Definition" : "take a drink with your teammate",
+    "Failure" : 0,
+    "Instruction" : "select one other player to be your teammate",
+    "Name" : "partner up",
+    "Opponents" : 0,
+    "Success" : 0,
+    "Teammates" : 1,
+    "Type" : "drink"
+  }, {
+    "Definition" : "take a drink with your opponent",
+    "Failure" : 0,
+    "Instruction" : "select one other player to be your opponent",
+    "Name" : "keep enemies closer",
+    "Opponents" : 1,
+    "Success" : 0,
+    "Teammates" : 0,
+    "Type" : "drink"
+  }, {
+    "Definition" : "each of your teammates take a drink or you take a shot",
+    "Failure" : 0,
+    "Instruction" : "select three other players to be your teammates",
+    "Name" : "hero or villain",
+    "Opponents" : 0,
+    "Success" : 0,
+    "Teammates" : 3,
+    "Type" : "drink"
+  }, {
+    "Definition" : "all three of you each takes a drink",
+    "Failure" : 0,
+    "Instruction" : "select one other player to be your teammate and one other player to be your opponent",
+    "Name" : "three little swigs",
+    "Opponents" : 1,
+    "Success" : 0,
+    "Teammates" : 1,
+    "Type" : "drink"
+  }, {
+    "Definition" : "choose either your teammates or opponents to each take a drink or you take a shot",
+    "Failure" : 0,
+    "Instruction" : "select two other players to be your teammates and two other players to be your opponents",
+    "Name" : "loyalty",
+    "Opponents" : 2,
+    "Success" : 0,
+    "Teammates" : 2,
+    "Type" : "drink"
+  }, {
+    "Definition" : "chug a beer or take a shot",
+    "Failure" : 0,
+    "Instruction" : "you are on your own for this one",
+    "Name" : "loneliest number",
+    "Opponents" : 0,
+    "Success" : 0,
+    "Teammates" : 0,
+    "Type" : "drink"
+  }, {
+    "Definition" : "choose your teammate to either chug a beer or take a shot and personally do the other",
+    "Failure" : 0,
+    "Instruction" : "select one other player to be your teammate",
+    "Name" : "favors",
+    "Opponents" : 0,
+    "Success" : 0,
+    "Teammates" : 1,
+    "Type" : "drink"
+  }, {
+    "Definition" : "your opponent either gives you a beer to chug or a shot to take and personally does the other",
+    "Failure" : 0,
+    "Instruction" : "select one other player to be your opponent",
+    "Name" : "tit for tat",
+    "Opponents" : 1,
+    "Success" : 0,
+    "Teammates" : 0,
+    "Type" : "drink"
+  }, {
+    "Definition" : "each of your teammates chugs a beer or takes a shot or you take two shots",
+    "Failure" : 0,
+    "Instruction" : "select three other players to be your teammates",
+    "Name" : "drink drank drunk",
+    "Opponents" : 0,
+    "Success" : 0,
+    "Teammates" : 3,
+    "Type" : "drink"
+  }, {
+    "Definition" : "all three of you each chugs a beer or takes a shot",
+    "Failure" : 0,
+    "Instruction" : "select one other player to be your teammate and one other player to be your opponent",
+    "Name" : "in this together",
+    "Opponents" : 1,
+    "Success" : 0,
+    "Teammates" : 1,
+    "Type" : "drink"
+  }, {
+    "Definition" : "choose either your teammates or opponents to take a shot or you take two shots",
+    "Failure" : 0,
+    "Instruction" : "select two other players to be your teammates and two other players to be your opponents",
+    "Name" : "a difficult decision",
+    "Opponents" : 2,
+    "Success" : 0,
+    "Teammates" : 2,
+    "Type" : "drink"
+  } ],
+  "Suits" : {
+    "drink" : {
+      "color" : "000000",
+      "index" : 4
+    },
+    "head" : {
+      "color" : "50b156",
+      "index" : 0
+    },
+    "moxie" : {
+      "color" : "e22e92",
+      "index" : 2
+    },
+    "muscle" : {
+      "color" : "fba42a",
+      "index" : 1
+    },
+    "random" : {
+      "color" : "5ebceb",
+      "index" : 3
+    }
+  }
+}

@@ -1,0 +1,196 @@
+{
+  "Art": [{
+    "Answer": ["two turtledoves", "three French hens", "four calling birds", "five golden rings", "six geese a-laying", "seven swans a-swimming", "eight maids a-milking", "nine ladies dancing", "ten lords a-leaping", "eleven pipers piping", "twelve drummers drumming"],
+    "Question": "On the first day of Christmas, my true love sent to me a partridge in a pear tree. Name five of the eleven remaining Christmas gifts and their corresponding days."
+  }, {
+    "Answer": ["Don Quixote", "A Tale of Two Cities", "The Lord of the Rings: The Fellowship of the Ring", "The Alchemist", "Le Petit Prince", "Harry Potter and the Philosopher’s Stone", "The Hobbit", "And Then There Were None", "Dream of the Red Chamber ", "Alice in Wonderland"],
+    "Question": "Depending on the source, the Bible and its variants or Quotations from Chairman Mao is the best-selling book of all time with the other in second. Name three of the next ten best-selling books of all time."
+  }, {
+    "Answer": ["Starry Night", "The Last Supper", "Creation of Adam", "The Scream", "The Persistence of Memory", "Girl with a Pearl Earring", "The Night Watch", "Water Lilies", "Guernica"],
+    "Question": "Unsurprisingly, the most viewed painting of all time is the Mona Lisa. List four of the next nine most viewed paintings of all time."
+  }, {
+    "Answer": ["Macbeth", "Midsummer Night’s Dream", "Hamlet", "Merchant of Venice", "Twelfth Night", "Much Ado About Nothing", "Taming of the Shrew", "Othello", "The Tempest"],
+    "Question": "Everyone has read Romeo and Juliet, the most famous of all of Shakespeare’s works. Name five of the next nine most read Shakespearian plays."
+  }, {
+    "Answer": ["Williem de Kooning", "Paul Cezanne", "Paul Gaugin", "Jackson Pollock", "Mark Rothko", "Rembrandt", "Pablo Picasso", "Amedeo Modigliani", "Roy Lichtenstein", "Gustav Klimt"],
+    "Question": "In May of 1990, Van Gogh’s painting sold for an inflation-adjusted $151.2 million, getting it just past the $150 million mark. Name four of the remaining ten artists that have produced paintings that have sold for more than $150 million."
+  }, {
+    "Answer": ["Chicago", " The Lion King ", "Cats", "Les Miserables", "A Chorus Line", "Oh! Calcutta!", "Mamma Mia!", "Wicked", "Beauty and the Beast"],
+    "Question": "Since 1988, the Phantom of the Opera has been performed over 10,000 times. Name four of the next nine most longest-running musicals on Broadway."
+  }, {
+    "Answer": ["Louvre", "Metropolitan Museum of Art", "British Museum", "Tate Modern", "National Gallery", "Vatican Museums", "National Palace Museum", "National Gallery of Art", "Centre Pompidou"],
+    "Question": "The Musee d’Orsey in Paris is the tenth most visited art museum in the world. Name to of the remaining top ten most visited art museums in the world."
+  }, {
+    "Answer": ["Red and Green", "Blue and Orange", "British Museum", "Yellow and Violet"],
+    "Question": "Surprisingly, black and white are not considered complimentary colors, due to their not technically being colors. Name all three pairs of complimentary colors."
+  }, {
+    "Answer": ["Avatar", "Star Wars [A New Hope]", "Titanic", "The Sound of Music", "E.T. the Extra-Terrestrial", "The Ten Commandments", "Doctor Zhivago", "Star Wars: The Force Awakens", "Jaws"],
+    "Question": "Since 1939, Gone with the Wind has held the title of the highest grossing movie, when adjusted for inflation. Name four of the next nine highest inflation-adjusted grossing movies."
+  }, {
+    "Answer": ["Michael Jackson", "AC/DC", "Pink Floyd", "Whitney Houston", "Meat Loaf", "Eagles", "Bee Gees"],
+    "Question": "Fleetwood Mac was responsible for \"Rumours,\" the eighth most sold album of all time. Name three of the other seven artists to have sold more than $40 million copies of an album."
+  }],
+
+  "Geography": [{
+    "Answer": ["Lake Huron", "Lake Michigan", "Lake Erie", "Lake Ontario"],
+    "Question": "Living up to its name, Lake Superior is the largest of the Great Lakes. Name all four other great lakes."
+  }, {
+    "Answer": ["France", "Germany", "Austria", "Italy"],
+    "Question": "The little-known country, Liechtenstein, is in Europe and it borders Switzerland. Name three of the remaining four countries to border Switzerland."
+  }, {
+    "Answer": ["North Carolina", "South Carolina", "Louisiana", "Virginia", "West Virginia", "Maryland"],
+    "Question": "Georgia, being named after King George II, is one of the few states named after European royalty Name three of the remaining six states that were named after European kings or queens."
+  }, {
+    "Answer": ["Alberta", "British Columbia", "Manitoba", "New Brunswick", "Newfoundland and Labrador", "Nova Scotia", "Nunavut", "Ontario", "Prince Edward Island", "Quebec", "Saskatchewan", "Yukon"],
+    "Question": "The Northwest Territories isn’t just a descriptor; it’s also the name of one of Canada’s provinces. Name four of the remaining twelve Canadian provinces."
+  }, {
+    "Answer": ["Connecticut", "Georgia", "Maryland", "Massachusetts", "New Jersey", "New Hampshire", "New York", "North Carolina", "Pennsylvania", "Rhode Island", "South Carolina", "Virginia"],
+    "Question": "Founded on December 7th, 1787, Delaware was the first of the thirteen colonies. Name nine of the remaining twelve thirteen colonies."
+  }, {
+    "Answer": ["New York", "Maryland", "Georgia", "Maine", "Texas"],
+    "Question": "The capitol of the United States is Washington, D.C., which is only a few miles away from a state capitol that beings with \"A.\" Name four of the five states with a capitol that begins with the letter \"A\"."
+  }, {
+    "Answer": ["Iowa", "Illinois", "Kentucky", "Tennessee", "Arkansas", "Oklahoma", "Kansas", "Nebraska"],
+    "Question": "Missouri is smack dab in the middle of America, which means it touches a fair number of states. Name six of the eight states that border Missouri."
+  }, {
+    "Answer": ["Minnesota", "Wisconsin", "Michigan", "Florida", "Texas", "New York"],
+    "Question": "Alaska is the largest state in the union by far, which is how it can home more than three million lakes. Name three of the six of the remaining top seven states with the most lakes."
+  }, {
+    "Answer": ["India", "the United States", "Indonesia", "Brazil", "Pakistan", "Nigeria", "Bangladesh", "Russia", "Japan"],
+    "Question": "As you may know, China is the most populous country on the planet. Name six of the next nine most populated countries on Earth."
+  }, {
+    "Answer": ["Argentina", "Bolivia", "Brazil", "Chile", "Colombia", "Ecuador", "Paraguay", "Peru", "Suriname", "Uruguay", "Venezuela"],
+    "Question": "Guyana is one of the twelve countries that composes South America. Name five of the remaining eleven countries of South America."
+  }],
+
+  "History": [{
+    "Answer": ["Germany", "Italy", "Japan", "Slovakia", "Hungary", "Romania", "Bulgaria", "Croatia"],
+    "Question": "Once the United States joined World War II, the Allied Powers quickly changed the tide of the war. Name four of the eight countries that were part of the Axis powers."
+  }, {
+    "Answer": ["I - 1", "V - 5", "X - 10", "L - 50", "C - 100", "D - 500", "M – 1,000"],
+    "Question": "It is difficult to tell which Super Bowl you are watching due to their use of Roman Numerals. Name five of the seven letters used in the Roman numeral system and their corresponding values."
+  }, {
+    "Answer": ["Millard Fillmore", "Andrew Johnson", "Chester Arthur", "Theodore Roosevelt", "Calvin Coolidge", "Harry Truman", "Lyndon Johnson", "Gerald Ford"],
+    "Question": "When President Harrison died, John Tyler took his place and became the first President not elected to the position. Name three of the remaining eight Presidents who were not elected."
+  }, {
+    "Answer": ["George Washington", "Thomas Jefferson", "Abraham Lincoln", "Theodore Roosevelt"],
+    "Question": "Mount Rushmore is a national icon housed in North Dakota. Name all four Presidents featured on the sculpture."
+  }, {
+    "Answer": ["Blue", "Yellow", "Black", "Green", "Red"],
+    "Question": "Everyone has watched the Olympics, but few have paid its logo any respect. Name all five colors used on the Olympic rings."
+  }, {
+    "Answer": ["Religion", "Speech", "Press", "Assembly", "Petition"],
+    "Question": "The Bill of Rights is arguably one of the most important texts in our nation’s history. Name four of the five freedoms protected by its first amendment."
+  }, {
+    "Answer": ["Secretary of Agriculture", "Secretary of Commerce", "Secretary of Defense", "Secretary of Education", "Secretary of Energy", "Secretary of Health and Human Services", "Secretary of Homeland Security", "Secretary of Housing and Urban Development", "Secretary of Interior", "Secretary of Labor", "Secretary of Transportation", "Secretary of Treasury", "Secretary of Veterans Affairs", "Secretary of Justice"],
+    "Question": "If the President, Vice President, Speaker of the House, and Senate President Pro Tempore all cannot perform the duties of the president, the first cabinet position on this list, the Secretary of State, steps in. Name eight of the remaining 14 cabinet positions."
+  }, {
+    "Answer": ["Great Pyramids of Giza", "Hanging Gardens of Babylon", "Statue of Zeus at Olympia", "Temple of Artemis", "Mausoleum", "Colossus of Rhodes", "The Lighthouse of Alexandria"],
+    "Question": "Of the Seven Wonders of Ancient World, only one remains standing to this day. Name four of the seven wonders of the ancient world."
+  }, {
+    "Answer": ["Alabama", "Arkansas", "Florida", "Georgia", "Louisiana", "Mississippi", "South Carolina", "Tennessee", "Texas", "Virginia"],
+    "Question": "On May 20th, 1861, North Carolina was the last state to secede from the United States and join the Confederacy. Name six of the ten remaining states that joined the Confederacy. "
+  }, {
+    "Answer": ["Water into Blood", "Invasion of Frogs", "Infestation of Lice", "Infestation of Flies", "Death of Livestock", "Development of Boils", "Arrival of Hailstorm", "Infestation of Locusts", "Enveloping Darkness", "Death of All Firstborn"],
+    "Question": "It is said that plagues were inflicted upon Egypt to persuade the Pharaoh to release the Israelites from slavery. Name five of the ten plagues of Egypt. "
+  }, {
+    "Answer": ["Hawaii", "Alaska", "Arizona", "New Mexico", "Oklahoma", "Utah", "Wyoming", "Idaho", "Washington", "Montana"],
+    "Question": "Though the first thirteen states of the United States joined simultaneously, practically every other state joined one by one. Name six of the last ten states to join the United States. "
+  }],
+
+  "Pop Culture": [{
+    "Answer": ["Aries", "Taurus", "Gemini", "Cancer", "Leo", "Virgo", "Libra", "Scorpio", "Sagittarius", "Capricorn", "Aquarius", "Pisces"],
+    "Question": "Nowadays, horoscopes can be used to do everything from avoid a potentially toxic relationship to tell you what kind of bean you are. Name ten of the twelve zodiac signs."
+  }, {
+    "Answer": ["Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"],
+    "Question": "Rudolph the Red-Nosed Reindeer is surprisingly not one of Santa’s reindeers. Name four of Santa’s eight actual reindeer."
+  }, {
+    "Answer": ["Sleepy", "Sneezy", "Grumpy", "Dopey", "Doc", "Happy", "Bashful"],
+    "Question": "Snow White and the Seven Dwarves was America’s first feature-length animated film and popularized Walt Disney and his many productions to come. Name six of the seven dwarves featured in the movie."
+  }, {
+    "Answer": ["Titanic", "Star Wars: The Force Awakens", "Jurassic World", "The Avengers", "Furious 7", "Avengers: Age of Ultron", "Harry Potter and the Deathly Hallows – Part 2", "Frozen", "Beauty and the Beast", "The Fate of the Furious"],
+    "Question": "Since 2009, Avatar has held the title for the highest grossing film of all time. Name six of the following ten highest grossing films."
+  }, {
+    "Answer": ["Planet Earth II", "Band of Brothers", "Planet Earth", "Game of Thrones", "Breaking Bad", "The Wire", "Rick and Morty", "Cosmos: A Spacetime Odyssey", "Cosmos", "The World at War"],
+    "Question": "IMDb not only keeps tabs on movies, as its name would imply, but also TV shows. Name four of the ten top rated TV shows on IMDb."
+  }, {
+    "Answer": ["One Dance", "Shape of You", "Closer", "Lean On", "Sorry", "Love Yourself", "Thinking Out Loud", "I Took a Pill in Ibiza", "Don’t Let Me Down", "What Do You Mean?"],
+    "Question": "The inclusion of using streaming numbers in record sales is a controversial decision because it does not lend as much help to the classics as it does works of Justin Bieber and Ed Sheeran. Name four of the ten most streamed songs of all time."
+  }, {
+    "Answer": ["Dwayne Johnson", "Jackie Chan", "Matt Damon", "Tom Cruise", "Johnny Depp", "Jennifer Lawrence", "Ben Affleck", "Vin Diesel", "Melissa McCarthy", "Shah Rukh Khan"],
+    "Question": "Women are severely misrepresented in Forbes’s list of most paid actors and actresses of 2016. Name five of the ten highest paid actors of 2016."
+  }, {
+    "Answer": ["Selena Gomez", "Ariana Grande", "Taylor Swift", "Beyonce", "Kim Kardashian", "Cristiano Ronaldo", "Kylie Jenner", "Justin Bieber", "Dwayne Johnson", "Kendall Jenner"],
+    "Question": "One measure of a person’s influence is how many Instagram followers he or she has. Name five of the ten most followed people on Instagram."
+  }, {
+    "Answer": ["Facebook", "Messenger", "YouTube", "Instagram", "Skype", "WhatsApp Messenger", "Google Maps", "Twitter"],
+    "Question": "Everyone’s phone comes pre-loaded with applications, but it is then up to the user to populate his or her phone with additional, optional apps. Name six of the eight most downloaded apps across the Apple and Android operating systems."
+  }, {
+    "Answer": ["The Big Bang Theory", "This is Us", "Empire", "Modern Family", "Grey’s Anatomy", "American Horror Story", "The Bachelor", "The Voice", "Designated Survivor"],
+    "Question": "More Americans tune in to watch The Walking Dead than any other show broadcast today. Name four of the next nine most watched shows on TV today."
+  }, {
+    "Answer": ["Grains", "Vegetables", "Fruit", "Fats", "Dairy", "Proteins"],
+    "Question": "Even though the USDA’s food pyramid has seen some change in recent years, the fundamental make-up of the pyramid has remain untouched. Name four of the six parts of the USDA’s food pyramid."
+  }],
+
+  "Science": [{
+    "Answer": ["Digestive", "Endocrine", "Muscular", "Nervous", "Reproductive", "Respiratory", "Skeletal", "Urinary"],
+    "Question": "The human body has many different functions and has developed systems to carry out those functions, the circulatory system being one that helps deliver blood to every part of the body. Name five of the remaining eight systems of the human body."
+  }, {
+    "Answer": ["Equilateral ( or Equiangular)", "Isosceles", "Scalene", "Right", "Acute", "Obtuse"],
+    "Question": "The triangle is the simplest of all shapes, meaning that there aren’t very many different types. Name all six categorizations of triangles."
+  }, {
+    "Answer": ["Helium", "Neon", "Argon", "Radon", "Xenon", "Krypton"],
+    "Question": "Noble gasses are elements with very low chemical reactivity that can be found on the very last column of the periodic table. Name four of the six Noble gasses."
+  }, {
+    "Answer": ["Adenine", "Thymine", "Cytosine", "Guanine", "Uracil"],
+    "Question": "There are only five nucleic acids that are used to write our entire genetic code. Name four of the five nucleic acids."
+  }, {
+    "Answer": ["Oxygen", "Carbon", "Hydrogen", "Nitrogen", "Calcium", "Phosphorus", "Potassium", "Sulfur", "Sodium", "Chlorine", "Magnesium"],
+    "Question": "When searching for alien life, scientists consistently look for the same elements and compounds because complex life—as we know it—has comparable elemental composition. Name seven of the eleven elements most commonly found in the human body."
+  }, {
+    "Answer": ["Domain", "Kingdom", "Phylum", "Class", "Order", "Family", "Genus"],
+    "Question": "When categorizing life, \"species\" is the most specific of the taxonomic ranks. Name five of the remaining seven taxonomic ranks."
+  }, {
+    "Answer": ["Igneous", "Sedimentary", "Metamorphic"],
+    "Question": "There are many, many types of minerals, but only three types of rocks. Name the three types of rocks."
+  }, {
+    "Answer": ["Troposphere", "Stratosphere", "Mesosphere", "Thermosphere", "Exosphere"],
+    "Question": "Not only does the earth’s atmosphere separate us from many of the dangers of space, but it, too, is separated. Name three of the five layers of the atmosphere."
+  }, {
+    "Answer": ["Radio", "Infrared", "Visible", "Ultraviolet", "X-Rays", "Gamma Rays"],
+    "Question": "The microwave in your kitchen is named after the type of electromagnetic radiation it utilizes to cook your food. Name four of the six remaining types of electromagnetic radiation."
+  }],
+
+  "Sports": [{
+    "Answer": ["Baltimore Orioles", "Boston Red Sox", "New York Yankees", "Atlanta Braves"],
+    "Question": "Babe Ruth is one of the most well-known athletes of all time. Name two of the four teams that Babe Ruth has played on."
+  }, {
+    "Answer": ["100-Meter Race", "Long Jump", "Shot Put", "High Jump", "400-Meter Race", "110-Meter Hurdle Race", "Discus Throw", "Pole Vault", "Javelin Throw", "1,500-Meter Race"],
+    "Question": "\"The World’s Greatest Athlete\" is typically a title given to the winner of the Olympic Decathlon. Name seven of the ten classic track and field events that compose the decathlon."
+  }, {
+    "Answer": ["The United States", "The Soviet Union", "Great Britain", "Germany", "France", "Italy", "China", "Russia", "Sweden", "East Germany"],
+    "Question": "Every country vies to dominate the others every four years during the Olympics. Name seven of the ten countries that have won the most gold medals throughout history."
+  }, {
+    "Answer": ["Indiana University", "University of Maryland", "University of Michigan", "Michigan State University", "Ohio State University", "Pennsylvania State University", "Rutgers University", "University of Illinois", "University of Iowa", "University of Minnesota", "University of Nebraska", "Northwestern University", "Purdue University", "University of Wisconsin"],
+    "Question": "The Big 10 Conference is the oldest Division I Sports Conference in the United States. Name nine of the fourteen schools in the Big 10 conference."
+  }, {
+    "Answer": ["Cristiano Ronaldo", "Lebron James", "Lionel Messi", "Roger Federer", "Kevin Durant", "Andrew Luck", "Rory McIlroy", "Stephen Curry", "James Harden", "Lewis Hamilton"],
+    "Question": "Their salaries are nothing to scoff at, but many of the highest paid athletes in the world make a significant amount of their income from sponsorships. Keeping that in mind, name six of the ten highest paid athletes in the world."
+  }, {
+    "Answer": ["Pittsburgh Steelers", "New England Patriots", "Dallas Cowboys", "San Francisco 49ers", "Green Bay Packers", "New York Giants", "Denver Broncos", "Oakland Raiders", "Washington Redskins"],
+    "Question": "Only nine teams have won three or more Super Bowls. Name five of the nine teams to have won three or more Super Bowls."
+  }, {
+    "Answer": ["New York Yankees", "San Francisco Giants", "St. Louis Cardinals", "Los Angeles Dodgers", "Oakland Athletics", "Boston Red Sox", "Detroit Tigers", "Chicago Cubs"],
+    "Question": "Only eight teams have made it to the World Series more than ten times. Name five of the eight teams to have more than ten World Series appearances."
+  }, {
+    "Answer": ["Karl Malone", "Kobe Bryant", "Michael Jordan", "Wilt Chamberlain", "Dirk Nowitzki", "LeBron James", "Shaquille O’Neal", "Moses Malone", "Elvin Hayes"],
+    "Question": "With more than 38,000 career points, Kareem Abdul-Jabbar is the highest-scoring NBA player of all time. Name six of the next nine most scoring NBA players."
+  }, {
+    "Answer": ["The Kentucky Derby", "The Preakness Stakes", "The Belmont Stakes"],
+    "Question": "The greatest achievement of thoroughbred horse-racing is the winning of the Triple Crown. Name two of the three races that comprise the Triple Crown."
+  }, {
+    "Answer": ["Brazil", "Russia", "United Kingdom", "Canada", "China", "Italy", "Greece", "United States", "Australia", "Japan"],
+    "Question": "The next Olympic games will be held during winter of 2018 in South Korea. Looking to the past, name six of the last ten countries to host either the summer or winter Olympic games."
+  }]
+}
