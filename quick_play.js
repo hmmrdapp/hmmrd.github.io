@@ -7,6 +7,7 @@ var triviaDeck;
 
 // trivia is only on next card so doesnt work if first card is a trivia
 // Pop culture trivia is broken?
+// Answers kind fucked for 2nd trivia
 
 // 0: not trivia
 // 1: flip but turn on trivia
@@ -217,9 +218,9 @@ $(document).ready(function() {
 
     }
 
-    var temp = data[2];
-    data[2] = data[trivias[0]];
-    data[trivias[0]] = data[2];
+    // var temp = data[2];
+    // data[2] = data[trivias[0]];
+    // data[trivias[0]] = data[2];
 
     deckOfCards = data;
   }
@@ -245,7 +246,7 @@ $(document).ready(function() {
     topcard.addClass('top-card');
     var cardTitle = topcard.find(".card-title").text();
     if(cardTitle.trim().toLowerCase().includes('trivia')) {
-      triviaState = 1;
+      // triviaState = 1;
     }
 
     //move the deck to correct position
