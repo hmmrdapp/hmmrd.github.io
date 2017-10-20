@@ -197,11 +197,10 @@
 		}
 
 		.card-header {
-			height: 90px;
+			margin-top: 20px;
 		}
 
 			.card-title {
-				margin-top: 10px;
 				font-size: 36px;
 				margin-bottom: 0px;
 			}
