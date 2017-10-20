@@ -220,9 +220,18 @@
 				height: 50px;
 				margin-bottom: 15px;
 			}
-			.drink-symbol img {
-				height: 100%;
+				.drink-symbol img {
+					height: 100%;
+					content: url('img/drink_icon.png');
+				}
+			.nodrink-symbol {
+				height: 70px;
+				margin-bottom: 15px;
 			}
+				.nodrink-symbol img {
+					height: 100%;
+					content: url('img/nodrink_icon.png');
+				}
 
 			.footer-text{
 				color: #D1D1D1;

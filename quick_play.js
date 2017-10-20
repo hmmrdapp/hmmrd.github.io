@@ -6,6 +6,7 @@ var suits;
 var triviaDeck;
 
 // trivia is only on next card so doesnt work if first card is a trivia
+// Pop culture trivia is broken?
 
 // 0: not trivia
 // 1: flip but turn on trivia
@@ -140,10 +141,10 @@ $(document).ready(function() {
 
     var drinkSymbolStr = "";
     if (card['Success'] == 0) {
-      drinkSymbolStr = '<img src="img/nodrink_icon.png">';
+      drinkSymbolStr = 'nodrink-symbol';
     }
     else {
-      drinkSymbolStr = '<img src="img/drink_icon.png">';
+      drinkSymbolStr = 'drink-symbol';
     }
 
     var footerStr = "";
@@ -176,8 +177,8 @@ $(document).ready(function() {
                   '+card['Definition']+' \
                 </div> \
                 <div class="card-footer card-front-footer"> \
-                    <div class="drink-symbol"> \
-                      '+ drinkSymbolStr +' \
+                    <div class="'+ drinkSymbolStr +'"> \
+                      <img> \
                     </div> \
                     <div class="footer-text"> \
                       hmmrd \
