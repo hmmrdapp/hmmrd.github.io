@@ -54,7 +54,7 @@ $(document).ready(function() {
       $('.top-card').addClass('flip'); 
       // setupHammer();
       // $(this).text("next card");
-      $(this).text("Draw Trivia Card");
+      $(this).text("trivia");
       triviaState = 2;
     }
     else if(triviaState == 2) {
@@ -137,14 +137,23 @@ $(document).ready(function() {
     var posStyle = "right: "+(cardOffset*(-1/2-pos+deckSize/2))+"px;";
     posStyle = posStyle + " top: "+(-1*cardOffset*(pos-1))+"px;";
     var frontCol = "background-color: #"+suits[card['Type']]['color']+";";
-    var footerStr = ""
+
+    var drinkSymbolStr = "";
+    if (card['Success'] == 0) {
+      drinkSymbolStr = '<img src="img/nodrink_icon.png">';
+    }
+    else {
+      drinkSymbolStr = '<img src="img/drink_icon.png">';
+    }
+
+    var footerStr = "";
     for (let i = 0; i <card['Teammates']; i++) {
       let pos = i*20;
-      footerStr += '<img class="footer-icon" src="img/green_avatar.png" style="left: '+pos+'px;">'
+      footerStr += '<img src="img/green_avatar.png" style="left: '+pos+'px;">'
     }
     for (let i = 0; i <card['Opponents']; i++) {
       let pos = i*20;
-      footerStr += '<img class="footer-icon" src="img/red_avatar.png" style="right: '+pos+'px;">'
+      footerStr += '<img src="img/red_avatar.png" style="right: '+pos+'px;">'
     }
 
     var cardHTML =  '<div class="card"> \
@@ -153,47 +162,26 @@ $(document).ready(function() {
                 <div class="card-back-img-cont"> \
                   <img class="card-back-img" src="img/back_blank.png"> \
                 </div> \
-                <div class="card-back-footer">' + footerStr + 
+                <div class="card-footer card-back-footer">' + footerStr + 
                 '</div> \
               </div> \
-            <div class="card-front" style="'+frontCol+'"> \
+            <div class="card-front"> \
               <div class="card-front-inner"> \
                 <div class="card-header"> \
                   <p class="card-title"> \
                     '+card['Name']+' \
                   </p> \
-                  <p class="card-subtitle"> \
-                    '+card['Type']+' \
-                  </p> \
                 </div> \
-                <div class="card-body outer"> \
-                  <div class="inner"> \
-                    '+card['Definition']+' \
-                  </div> \
+                <div class="card-body"> \
+                  '+card['Definition']+' \
                 </div> \
-                <div class="card-footer"> \
-                  <div class="footer-icon-container footer-icon-left outer"> \
-                    <div class="inner"> \
-                      <img class="footer-icon" src="img/green_cup.png"> \
-                      <div class="footer-text"> \
-                        <span class="times-symbol">&times;</span>  \
-                        <span class="times-number"> \
-                          '+card['Success']+' \
-                        </span> \
-                      </div> \
+                <div class="card-footer card-front-footer"> \
+                    <div class="drink-symbol"> \
+                      '+ drinkSymbolStr +' \
                     </div> \
-                  </div> \
-                  <div class="footer-icon-container footer-icon-right outer"> \
-                    <div class="inner"> \
-                      <div class="footer-text"> \
-                        <span class="times-number"> \
-                          '+card['Failure']+' \
-                        </span> \
-                        <span class="times-symbol">&times;</span>  \
-                      </div> \
-                      <img class="footer-icon" src="img/red_cup.png"> \
+                    <div class="footer-text"> \
+                      hmmrd \
                     </div> \
-                  </div> \
                 </div> \
               </div> \
             </div>  \
