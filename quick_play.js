@@ -234,10 +234,10 @@ $(document).ready(function() {
       data[i] = data[j];
       data[j] = temp;
 
-      var cardTitle = data[i]['Name'];
-      if(cardTitle.trim().toLowerCase().includes('trivia')) {
-        trivias.push(i)
-      }
+      // var cardTitle = data[i]['Name'];
+      // if(cardTitle.trim().toLowerCase().includes('trivia')) {
+      //   trivias.push(i)
+      // }
 
     }
 
