@@ -226,7 +226,7 @@ $(document).ready(function() {
     if (data[0] === undefined) data.shift(); //when pulling from firebase 1st value is undefined
 
     //delete later
-    trivias = []
+    // trivias = []
 
     for (var i = data.length - 1; i > 0; i--) {
       var j = Math.floor(Math.random() * (i + 1));
@@ -241,9 +241,9 @@ $(document).ready(function() {
 
     }
 
-    var temp = data[2];
-    data[2] = data[trivias[0]];
-    data[trivias[0]] = data[2];
+    // var temp = data[2];
+    // data[2] = data[trivias[0]];
+    // data[trivias[0]] = data[2];
 
     deckOfCards = data;
   }
