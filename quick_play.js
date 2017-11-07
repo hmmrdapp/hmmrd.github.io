@@ -5,15 +5,25 @@ var deckOfCards;
 var suits;
 var triviaDeck;
 
-// trivia is only on next card so doesnt work if first card is a trivia
-// Pop culture trivia is broken?
-// Answers kind fucked for 2nd trivia
+// TODO: 
+// 2 column long answer trivia
+// trivia small screen  overflow
+// trivia clickable
+// swipes
+// tap card disabled when trivia is up
+//secretaries is too many nathan
+// where to put cycle btn
+
+
 
 // 0: not trivia
 // 1: flip but turn on trivia
 // 2: show q
 // 3: show answer
 var triviaState = 0;
+
+// so that new trivia q doesn't return same q
+var whichTrivia = -1;
 
 $(document).ready(function() {  
   retrieveFB('Cards', shuffleCards);
@@ -41,8 +51,13 @@ $(document).ready(function() {
   });
 
   $('#action-btn').click( function() {
+    // default state
     if(triviaState == 0) {
-      $('.trivia-card').addClass('hidden');
+      if(!$('.trivia-card').hasClass('hidden')) {
+        //reset Trivia
+        resetTrivia();
+      }
+
       if ($(".top-card").hasClass('flip') && !$(".top-card").hasClass('card_finished')) {
         nextCard();
       }
@@ -52,38 +67,37 @@ $(document).ready(function() {
         $(this).text("next card");
       }
     }
+
+    // prepare to draw trivia card 
     else if (triviaState == 1) {
       $('.top-card').addClass('flip'); 
       // setupHammer();
-      // $(this).text("next card");
       $(this).text("trivia");
       triviaState = 2;
     }
+
+    //Draw Question
     else if(triviaState == 2) {
-
-      var cardTitle = $('.top-card:not(card_finished)').find('.card-title').text();
-
-      var type = cardTitle.substr(cardTitle.indexOf(':')+1).trim();
-      type = type.charAt(0).toUpperCase() + type.slice(1);
-      var questions = triviaDeck[type];
-      var which     = Math.floor(Math.random() * questions.length)
-
-      $(".trivia-question").append(questions[which]['Question']);
-      $('.trivia-answer').append(questions[which]['Answer']);
-
+      $('.trivia-cycle-btn').removeClass('hidden');
       $('.trivia-card').removeClass('hidden');
-      $(this).text("Show Answer");
 
+      drawTriviaCard();
 
+      $(this).text("show answer");
       triviaState = 3;
     }
-    else if(triviaState == 3) {
-      //show answer
 
-      $('.trivia-answer').removeClass('hidden');
+    // show answer
+    else if(triviaState == 3) {
+      $('.trivia-card').addClass('flip');
+      $('.trivia-cycle-btn').addClass('hidden');
       $(this).text('Next Card');
       triviaState = 0;
     }
+  });
+
+  $('#trivia-cycle-btn').click(function() {
+    drawTriviaCard();
   });
 ///////////////////
 
@@ -115,7 +129,11 @@ $(document).ready(function() {
       drawCard();
     }
 
-    $($('.card').last()).addClass('top-card');
+    topcard = $($('.game-card').last());
+    topcard.addClass('top-card');
+    if(topcard.hasClass('is-trivia')) {
+      triviaState = 1;
+    }
   }
 ///////////////////
 
@@ -158,7 +176,12 @@ $(document).ready(function() {
       footerStr += '<img src="img/red_avatar.png" style="right: '+pos+'px;">'
     }
 
-    var cardHTML =  '<div class="card"> \
+    var cardClassStr = "card game-card"
+    if(card['Name'].toLowerCase().includes('trivia')) {
+      cardClassStr += ' is-trivia'
+    }
+
+    var cardHTML =  '<div class="'+cardClassStr+'"> \
           <div class="card-inner" style="'+posStyle+'"> \
               <div class="card-back"> \
                 <div class="card-back-img-cont"> \
@@ -168,7 +191,7 @@ $(document).ready(function() {
                 '</div> \
               </div> \
             <div class="card-front"> \
-              <div class="card-front-inner"> \
+              <div class="inner-border-design"> \
                 <div class="card-header"> \
                   <p class="card-title"> \
                     '+card['Name']+' \
@@ -181,7 +204,7 @@ $(document).ready(function() {
                     <div class="'+ drinkSymbolStr +'"> \
                       <img> \
                     </div> \
-                    <div class="footer-text"> \
+                    <div class="hmmrd-footer"> \
                       hmmrd \
                     </div> \
                 </div> \
@@ -218,9 +241,9 @@ $(document).ready(function() {
 
     }
 
-    // var temp = data[2];
-    // data[2] = data[trivias[0]];
-    // data[trivias[0]] = data[2];
+    var temp = data[2];
+    data[2] = data[trivias[0]];
+    data[trivias[0]] = data[2];
 
     deckOfCards = data;
   }
@@ -241,12 +264,13 @@ $(document).ready(function() {
 
     drawCard(deckSize+1);
     //re-make the deck
-    var $cards = $('.card:not(.card_finished)');
+    var $cards = $('.game-card:not(.card_finished)');
     var topcard = $cards.last();
     topcard.addClass('top-card');
-    var cardTitle = topcard.find(".card-title").text();
-    if(cardTitle.trim().toLowerCase().includes('trivia')) {
-      // triviaState = 1;
+
+    // Check if Trivia
+    if(topcard.hasClass('is-trivia')) {
+      triviaState = 1;
     }
 
     //move the deck to correct position
@@ -260,6 +284,40 @@ $(document).ready(function() {
     $('.card_finished').one(animationEvent, function(e) {
       this.remove();
     });
+  }
+
+  function drawTriviaCard() {
+    var cardTitle = $('.top-card:not(card_finished)').find('.card-title').text();
+
+    var type = cardTitle.substr(cardTitle.indexOf(':')+1).trim();
+    type = type.charAt(0).toUpperCase() + type.slice(1);
+    if(type == "Pop culture") type = "Pop Culture"
+    var questions = triviaDeck[type];
+    var which = Math.floor(Math.random() * questions.length);
+
+    // make sure not the same
+    while(which == whichTrivia) {
+      which = Math.floor(Math.random() * questions.length);
+    }
+    whichTrivia = which
+
+    $('.trivia-title').text(cardTitle);
+    $('.trivia-question').text(questions[whichTrivia]['Question']);
+    var answerList = questions[whichTrivia]['Answer'];
+    if(answerList.length >= 12 ) {
+      // process overflow
+    }
+    var answerStr  = ""
+    for (var i = 0; i < answerList.length; i++) {
+      answerStr += answerList[i]+"<br>"
+    }
+    $('.trivia-answer').html(answerStr);
+  }
+
+  function resetTrivia() {
+    $('.trivia-card').addClass('hidden');
+    $('.trivia-card').removeClass('flip');
+    whichTrivia = -1;
   }
 ///////////////////
 

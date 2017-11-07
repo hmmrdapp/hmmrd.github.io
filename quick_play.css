@@ -136,20 +136,6 @@
 		position: relative;
 	}
 
-	.trivia-card {
-		position: absolute;
-		background-color: white;
-		top: 0;
-		left: -40px;
-		z-index: 20;
-
-		color: black;
-	}
-
-	.trivia-answer {
-		margin-top: 10px;
-	}
-
 	.deck {
 		margin: 0 auto;
 	}
@@ -159,16 +145,11 @@
 		height: 478px; /*Because of border*/
 	}
 
-	.card-inner > div {
+	.card-inner > div { /* card-front, card-back*/
 		border-radius: 17px;
 		border: 2px solid #777;
 
 		text-align: center;
-	}
-
-	.card-inner > div > div {
-		border-radius: 15px;
-		border: 10px solid white;
 	}
 
 	.card-footer {
@@ -176,24 +157,64 @@
 		bottom: 0;
 		border: none !important;
 	}
+
+  /*game-card-front and trivia*/
+  .inner-border-design {
+    position: relative;
+    width: calc(100% - 20px);
+    height: calc(100% - 20px);
+
+    margin: 10px;
+    padding: 10px;
+
+    border: 6px solid #AEDDF5;
+    border-radius: 10px;
+  }
+
+  .hmmrd-footer {
+    font-size: 18px;
+    color: #D1D1D1;
+  }
+
 	/**************************/
 
+  /* Trivia Card */
+    .trivia-card {
+      position: absolute;
+      top: 0;
+      /*left: -40px;*/
+      z-index: 20;
+
+      color: white;
+    }
+
+    .trivia-card .card-front, .trivia-card .card-back{
+      background-color: #777;
+      border: none;
+    }
+
+    .trivia-title  {
+      margin-top: 20px;
+    }
+
+    .trivia-subtitle {
+      font-size: 20px;
+      margin-bottom: 30px;
+    }
+    .trivia-body {
+      font-size: 18px;
+    }
+    .trivia-footer {
+      width: calc(100% - 20px);
+      text-align: center;
+      margin-bottom: 5px;
+    }
+  /**************************/
+
 	/*			Card Front 				*/
-		.card-front {
+		.game-card .card-front {
 			background-color: #FFFFFF;
 			color: #494949;
-		}
-
-		.card .card-front .card-front-inner {
-			position: relative;
-			width: calc(100% - 20px);
-			height: calc(100% - 20px);
-
-			margin: 10px;
-			padding: 10px;
-
-			border: 6px solid #AEDDF5;
-			border-radius: 10px;
 		}
 
 		.card-header {
@@ -232,15 +253,10 @@
 					height: 100%;
 					content: url('img/nodrink_icon.png');
 				}
-
-			.footer-text{
-				color: #D1D1D1;
-				font-size: 18px;
-			}
 	/**************************/
 
 	/*			Card Back 				*/
-		.card-back {
+		.game-card .card-back {
 			background-color: #5ebceb;
 		}
 
@@ -248,6 +264,9 @@
 			position: absolute;
 			height: 100%;
 			width: 100%;
+
+      border-radius: 15px;
+      border: 10px solid white;
 		}
 
 		.card-back-img {
@@ -270,13 +289,13 @@
 	/**************************/
 
 	@media screen and (max-height: 700px) {
-		.deck, .card {
+		.deck, .card, .trivia-card {
 			width: 240px;
 			height: 360px;
 		}
 
 		/*  Card Front    */
-			.card-front { 
+			.card-front, .trivia-card > div > div { 
 				padding: 5px;
 			}
 
@@ -285,7 +304,7 @@
 				border: 8px solid white;
 			}
 
-      .card .card-front .card-front-inner {
+      .inner-border-design {
         position: relative;
         width: calc(100% - 10px);
         height: calc(100% - 10px);
@@ -322,7 +341,7 @@
         width: calc(100% - 10px);
       }
 
-      .footer-text{
+      .hmmrd-footer{
         font-size: 12px;
       }
 
@@ -335,6 +354,20 @@
         margin-right: 24px;
       }
 		/******************/
+
+    /*  Trivia Card */
+      .trivia-title {
+        margin-top: 10px;
+      }
+      .trivia-subtitle{
+        font-size: 16px;
+        margin-bottom: 20px;
+      }
+      .trivia-body {
+        font-size: 14px;
+      }
+      .trivi
+    /*****************/
 	}
 
 /**********************************/
@@ -350,4 +383,7 @@
 	.controls-container .btn {
 		min-width: 110px;
 	}
+
+  .trivia-cycle-btn {
+  }
 /**********************************/

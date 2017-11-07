@@ -78,7 +78,7 @@
 
           <div class="game content">
             <div class="deck">
-<!-- 
+<!--  
               <div class="card top-card ">
                 <div class="card-inner" style="">
 
@@ -128,20 +128,48 @@
                   
                 </div>
               </div> 
--->
+ -->
             </div>
 
-              <div class="trivia-card hidden">
-                <div class="trivia-question">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                </div>
+              <div class="card trivia-card hidden">
+                <div class="card-inner">
+                  <div class="card-back">
+                    <div class="inner-border-design">
+                      <div class="trivia-title card-title">
+                      </div>
+                      <div class="trivia-subtitle">
+                        question
+                      </div>
+                      <div class="trivia-question trivia-body">
+                      </div>
+                      <div class="card-footer hmmrd-footer trivia-footer">
+                        hmmrd
+                      </div>
+                    </div>
+                  </div>
 
-                <div class="trivia-answer hidden">
-                  Lorem ipsum dolor sit amet
+                  <div class="card-front">
+                    <div class="inner-border-design">
+                      <div class="trivia-title card-title">
+                      </div>
+                      <div class="trivia-subtitle">
+                        answer
+                      </div>
+                      <div class="trivia-answer trivia-body">
+                      </div>
+                      <div class="card-footer hmmrd-footer trivia-footer">
+                        hmmrd
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
 
             <div class="controls-container">
+              <button id="trivia-cycle-btn" class="btn btn-lg trivia-cycle-btn hidden">
+                new question
+              </button>
+
               <button id="action-btn" class="btn btn-lg action-btn">
                 flip
               </button>
