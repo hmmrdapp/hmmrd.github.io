@@ -13,6 +13,9 @@ var triviaDeck;
 // tap card disabled when trivia is up
 //secretaries is too many nathan
 // where to put cycle btn
+// Trivia bug, flip card over after viewing trivia cards
+
+// cards just mode b/e
 
 
 
@@ -152,6 +155,11 @@ $(document).ready(function() {
 
   function makeCard(n, pos) {
     var card = deckOfCards[n];
+    if(card === undefined) {
+      cardNum++;
+      n = cardNum;
+      card = deckOfCards[n];
+    }
     if (pos === undefined) pos=n;
 
     var posStyle = "right: "+(cardOffset*(-1/2-pos+deckSize/2))+"px;";
@@ -264,7 +272,7 @@ $(document).ready(function() {
 
     drawCard(deckSize+1);
     //re-make the deck
-    var $cards = $('.game-card:not(.card_finished)');
+    var $cards  = $('.game-card:not(.card_finished)');
     var topcard = $cards.last();
     topcard.addClass('top-card');
 
