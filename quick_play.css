@@ -141,8 +141,8 @@
 	}
 
 	.deck, .card, .trivia-card {
-		width: 324px;	/*Because of border*/
-		height: 478px; /*Because of border*/
+		width: 344px;	/*Because of border*/
+		height: 480px; /*Because of border*/
 	}
 
 	.card-inner > div { /* card-front, card-back*/
