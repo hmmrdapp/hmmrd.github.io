@@ -5,20 +5,6 @@ var deckOfCards;
 var suits;
 var triviaDeck;
 
-// TODO: 
-// 2 column long answer trivia
-// trivia small screen  overflow
-// trivia clickable
-// swipes
-// tap card disabled when trivia is up
-//secretaries is too many nathan
-// where to put cycle btn
-// Trivia bug, flip card over after viewing trivia cards
-
-// cards just mode b/e
-
-
-
 // 0: not trivia
 // 1: flip but turn on trivia
 // 2: show q
@@ -29,23 +15,41 @@ var triviaState = 0;
 var whichTrivia = -1;
 
 $(document).ready(function() {  
-  retrieveFB('Cards', shuffleCards);
+  retrieveFB('Cards', function(data) {
+    keep = []
+    for (var i = data.length - 1; i >= 0; i--) {
+      if (data[i]['Mode'] == 'H') {
+        data.splice(i,1);
+      }
+    }
+    console.log(data);
+    // shuffleCards(data)
+  });
   retrieveFB('Trivia', function(data) {
     triviaDeck = data;
   });
   retrieveFB('Suits', function(data) {
     suits = data;
-    endLoading();
+    // endLoading();
   });
   // endLoading();
 });
 
 // Interactions  //
   $(document).on('click', ".top-card", function() {
+    if (!$('.trivia-card').hasClass('hidden')) {
+      return;
+    }
     $(this).toggleClass("flip");
     if ($(".top-card").hasClass('flip')) {
       // setupHammer();
-      $('#action-btn').text("next card");
+      if (triviaState == 1) {
+        $('#action-btn').text("trivia")
+        triviaState = 2;;  
+      }
+      else {
+        $('#action-btn').text("next card");  
+      }
     }
     else {
       // removeHammer();
@@ -319,7 +323,12 @@ $(document).ready(function() {
     for (var i = 0; i < answerList.length; i++) {
       answerStr += answerList[i]+"<br>"
     }
+    var answerFontStr = "100%";
+    if (answerList.length >=14) {
+      answerFontStr = "75%";
+    }
     $('.trivia-answer').html(answerStr);
+    $('.trivia-answer').css('font-size',answerFontStr);
   }
 
   function resetTrivia() {
