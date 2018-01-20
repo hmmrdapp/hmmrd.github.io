@@ -19,18 +19,21 @@ $(document).ready(function() {
     keep = []
     for (var i = data.length - 1; i >= 0; i--) {
       if (data[i]['Mode'] == 'H') {
-        data.splice(i,1);
+        // data.splice(i,1);
+        continue;
+      }
+      else {
+        keep.push(data[i]);
       }
     }
-    console.log(data);
-    // shuffleCards(data)
+    shuffleCards(keep)
   });
   retrieveFB('Trivia', function(data) {
     triviaDeck = data;
   });
   retrieveFB('Suits', function(data) {
     suits = data;
-    // endLoading();
+    endLoading();
   });
   // endLoading();
 });
@@ -237,26 +240,12 @@ $(document).ready(function() {
   function shuffleCards(data) {
     if (data[0] === undefined) data.shift(); //when pulling from firebase 1st value is undefined
 
-    //delete later
-    // trivias = []
-
     for (var i = data.length - 1; i > 0; i--) {
       var j = Math.floor(Math.random() * (i + 1));
       var temp = data[i];
       data[i] = data[j];
       data[j] = temp;
-
-      // var cardTitle = data[i]['Name'];
-      // if(cardTitle.trim().toLowerCase().includes('trivia')) {
-      //   trivias.push(i)
-      // }
-
     }
-
-    // var temp = data[2];
-    // data[2] = data[trivias[0]];
-    // data[trivias[0]] = data[2];
-
     deckOfCards = data;
   }
 
